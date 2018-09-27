@@ -309,7 +309,7 @@ data.plot.hist(alpha = 0.7) # setting alpha level to inspect distribution overla
 
 
 
-![png](index_files/index_22_1.png)
+![png](output_22_1.png)
 
 
 
