@@ -5,7 +5,7 @@
 * Plot data from single variables using scatter plots, histograms, line plots, boxplots and KDE plots in pandas
 * Plot multi-dimensional data using scatter matrix and parallel coordinate plots.
 
-**NOTE:** Due to length of this lab, and the fact that plots designed for notebooks in this lab are not properly displayed in the markdown file, you are required to work with the included index.ipynb notebook and follow the instructions to change / add to the given code. 
+**NOTE:** Due to length of this lab, and the fact that plots designed for notebooks in this lab are not properly displayed in the markdown file, you are required to work with the included [index.ipynb](index.ipynb) notebook and follow the instructions to change / add to the given code. 
 
 ## Introduction
 In this lesson, we will be looking at data visualization using `pandas` and `matplotlib` modules that we already seen and practiced with. Pandas uses matplotlib under the hood for data visualization, and provides some handy yet efficient functions for visualizing data from dataframes on the go. 
