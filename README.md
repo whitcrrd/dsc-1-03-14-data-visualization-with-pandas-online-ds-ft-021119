@@ -1,20 +1,20 @@
 
-# Visualizing Data with `pandas`
-## SWBATs
+# Data Visualization with Pandas
+
+## Introduction
+In this lesson, we will be looking at data visualization using Pandas and Matplotlib - modules that we have already seen and used. Pandas uses matplotlib under the hood for data visualization, and provides some handy yet efficient functions for visualizing data from DataFrames.
+
+## Objectives
+You will be able to:
 * Understand the relation between `pandas` and `matplotlib` plots and their attributes
 * Plot data from single variables using scatter plots, histograms, line plots, boxplots and KDE plots in pandas
 * Plot multi-dimensional data using scatter matrix and parallel coordinate plots.
 
-**NOTE:** Due to length of this lab, and the fact that plots designed for notebooks in this lab are not properly displayed in the markdown file, you are required to work with the included [index.ipynb](index.ipynb) notebook and follow the instructions to change / add to the given code. 
+## Styling a Plot
 
-## Introduction
-In this lesson, we will be looking at data visualization using `pandas` and `matplotlib` modules that we already seen and practiced with. Pandas uses matplotlib under the hood for data visualization, and provides some handy yet efficient functions for visualizing data from dataframes on the go. 
+Before we dive into data visualization in Pandas, it would be a good idea to get a quick introduction to Matplotlib's `style` package. Matplotlib comes with a number of predefined styles to customize the plots. These styles generally change the look of plots by changing color maps, line styles, backgrounds etc. Because Pandas is built on Matplotlib for visualizations, this will change the style of our Pandas graphs as well as we shall see below: 
 
-#### Styling a Plot
-
-Before we dive into data visualization in pandas, it would a good idea to get a quick introduction to matplotlib's `style` package. Matplotlib comes with a number of predefined styles to customize the plots. These styles generally change the look of plots by changing colo maps, line styles, backgrounds etc. Because pandas is built on matplotlib for visualizations, this will change the style of our pandas graphs as well as we shall see below: 
-
-We can use `plt.style.available` to see a list of predefined styles available in matplotlib. The `%matplotlib notebook` magic below optimizes the plots for displaying them in jupyter notebooks
+We can use `plt.style.available` to see a list of predefined styles available in Matplotlib. The `%matplotlib notebook` magic below optimizes the plots for displaying them in jupyter notebooks
 
 
 ```python
@@ -55,7 +55,7 @@ plt.style.available
 
 
 
-So this provides us with a list of styles available. In order to use a style, we simply give the command `plt.style.use(<style name>)`. Let's use `ggplot` for now and see how it changes the default style. You are encouraged to try other styles and see how they impact the look and feel of the plots. 
+So this provides us with a list of styles available. In order to use a style, we simply give the command `plt.style.use(<style name>)`. Let's use `ggplot` for now and see how it changes the default style. Feel free to try other styles and see how they impact the look and feel of the plots! 
 
 
 ```python
@@ -64,7 +64,7 @@ plt.style.use('ggplot')
 
 #### Create a dataset for visualization
 
-Pandas offers excellent built-in visualization features and thats where it really shines. It helps with with fast and easy plotting of data stored as pandas series and DataFrames that can help fast and convenient exploratory analysis. 
+Pandas offers excellent built-in visualization features. It's particularly useful for exploratory data analysis of data that's stored as Pandas Series or DataFrame. 
 
 Let's build a synthetic temporal DataFrame with following steps:
 
@@ -106,7 +106,7 @@ data.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -311,7 +311,7 @@ data.plot.hist(alpha = 0.7) # setting alpha level to inspect distribution overla
 
 
 
-![png](index_files/index_22_1.png)
+![png](index_files/index_24_1.png)
 
 
 
@@ -358,7 +358,7 @@ iris.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-    
+
     .dataframe thead th {
         text-align: right;
     }
@@ -478,13 +478,11 @@ Looking at our parallel plot, we can see that the petal length and petal width a
 
 These initial set of statistical observations go a long way in the field of data analytics. We may decide to apply extra pre-processing to the data, or decide which are the best predictor variables for our analysis - based on the results of quick visualizations in pandas. 
 
-### Level Up - (Optional)
+### Level Up: (Optional)
 
 In the parallel plot above, we can see that feature values have different ranges. We can further simplify this plot by first normalizing the dataset (i.e. scaling all feature values between 0 and 1) and then plotting a parallel plot. 
-[Here is an article](https://machinelearningmastery.com/rescaling-data-for-machine-learning-in-python-with-scikit-learn/) with a short yet insightful description on normalizing and scaling data in python. 
-
-Wanna give it a go !!
+[Here is an article](https://machinelearningmastery.com/rescaling-data-for-machine-learning-in-python-with-scikit-learn/) with a short yet insightful description on normalizing and scaling data in Python. 
 
 ## Summary
 
-In this lesson, we learned about the relationship between pandas visualizations and matplotlib objects. We saw how we can customize plots with colormaps and plot styles. We plotted some uni-variate data using scatter, boxplots, line plots and KDEs , as well as multivariate (multidimensional) plotting using scatter matrix and parallel coordinate plots. In future, we shall look into `seaborn` plotting library and see how that can further simply our visualization tasks. 
+In this lesson, we learned about the relationship between Pandas visualizations and Matplotlib objects. We saw how we can customize plots with colormaps and plot styles. We plotted some uni-variate data using scatter, boxplots, line plots and KDEs , as well as multivariate (multidimensional) plotting using scatter matrix and parallel coordinate plots. In future, we shall look into `seaborn` plotting library and see how that can further simply our visualization tasks. 
