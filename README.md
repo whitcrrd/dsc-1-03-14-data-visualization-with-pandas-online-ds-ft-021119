@@ -338,11 +338,11 @@ Pandas also has plotting tools that help with visualizing high dimensional data 
 
 >The iris data set is a classic multivariate data set, which includes the sepal length, sepal width, petal length, and petal width  for hundreds of samples of three species of the iris flower. 
 
-The iris dataset is available in your folder as `Iris.csv`.
+The iris dataset is available in your folder as `iris.csv`.
 
 
 ```python
-iris = pd.read_csv('Iris.csv')
+iris = pd.read_csv('iris.csv')
 iris.head()
 ```
 
